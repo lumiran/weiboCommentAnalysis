@@ -63,8 +63,11 @@ df = pd.DataFrame({'ID': ids, '评论': comments})
 df = df.drop_duplicates()
 df.to_csv('Data.csv', index=False, encoding='gb18030')
 
+# Example for data analysis
+Key = YourKey
+keySum = []    
+for i in range(len(comments)):
+    keySum.append(Key in comments[i])
 
-        
-
-
+print('frequency:',keySum/len(comments))
 
